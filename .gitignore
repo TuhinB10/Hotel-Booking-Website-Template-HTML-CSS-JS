@@ -1,0 +1,17 @@
+# General
+.DS_Store
+.env
+.env.local
+*.logs
+
+# Nodejs
+node_modeles/
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
