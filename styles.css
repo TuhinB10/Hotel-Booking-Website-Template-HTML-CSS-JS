@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --hero-img: url("https://img.freepik.com/free-photo/hammocks-with-palm-trees_1203-201.jpg?t=st=1726170596~exp=1726174196~hmac=035e3b9d3aab638abce74b8ab0a58b86ec6a3dbb13326b9e50479f22e2a09d35&w=996");
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', Verdana;
+  font-family: "Poppins", Verdana;
   margin: 0;
   padding: 0;
   color: #333;
@@ -15,11 +19,6 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-}
-
-.rooms {
-
-  background-image: url('https://img.freepik.com/free-photo/sunset-pool_1203-3192.jpg?t=st=1726171440~exp=1726175040~hmac=f6fddc94b957781db157c27d7150230003e9fe02e8b84172ca370c45c224695c&w=1380');
 }
 
 header {
@@ -58,7 +57,7 @@ nav ul li a {
 }
 
 .hero {
-  background: url('https://img.freepik.com/free-photo/hammocks-with-palm-trees_1203-201.jpg?t=st=1726170596~exp=1726174196~hmac=035e3b9d3aab638abce74b8ab0a58b86ec6a3dbb13326b9e50479f22e2a09d35&w=996') no-repeat center center/cover;
+  background: var(--hero-img) no-repeat center center/cover;
   height: 500px;
   display: flex;
   align-items: center;
@@ -118,15 +117,29 @@ button {
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
   --y: calc(var(--posY, 0) * 1px);
-  background-image:
-    linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
-    radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200 200 200), rgb(022 000 045)),
-    radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250 255 000), rgb(036 000 000)),
-    radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(020 175 125), rgb(000 010 255)),
-    radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255 077 000), rgb(000 200 255)),
+  background-image: linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+    radial-gradient(
+      90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
+      rgb(200 200 200),
+      rgb(022 000 045)
+    ),
+    radial-gradient(
+      100% 100% at calc(80% - var(--x)) calc(0% - var(--y)),
+      rgb(250 255 000),
+      rgb(036 000 000)
+    ),
+    radial-gradient(
+      150% 210% at calc(100% + var(--x)) calc(0% + var(--y)),
+      rgb(020 175 125),
+      rgb(000 010 255)
+    ),
+    radial-gradient(
+      100% 100% at calc(100% - var(--x)) calc(30% - var(--y)),
+      rgb(255 077 000),
+      rgb(000 200 255)
+    ),
     linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
   background-blend-mode: overlay, overlay, difference, difference, difference, normal;
-
 }
 
 .room {
@@ -149,8 +162,6 @@ button {
 .room:hover {
   transform: scale(1.05);
 }
-
-
 
 .footer {
   position: relative;
@@ -256,7 +267,6 @@ button {
   0% {
     background-position-x: 1000px;
   }
-
   100% {
     background-positon-x: 0px;
   }
@@ -266,7 +276,6 @@ button {
   0% {
     background-position-x: -1000px;
   }
-
   100% {
     background-positon-x: 0px;
   }
